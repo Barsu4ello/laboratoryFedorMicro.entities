@@ -7,6 +7,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.List;
+
 @Entity
 @Table(name = "audios", schema = "audios")
 @Setter
@@ -30,6 +32,7 @@ public class Audio {
     @ManyToOne
     @JoinColumn(name = "author_id")
     private Author author;
+
 
 //    @ManyToMany
 //    @JoinTable(
