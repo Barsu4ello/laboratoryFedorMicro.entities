@@ -30,7 +30,7 @@ public class AudioMapper {
         return context -> {
             Audio source = context.getSource();
             AudioResponse destination = context.getDestination();
-            destination.setAuthor(source.getAuthor().getId());
+            destination.setAuthor(source.getAuthorId());
             return context.getDestination();
         };
     }

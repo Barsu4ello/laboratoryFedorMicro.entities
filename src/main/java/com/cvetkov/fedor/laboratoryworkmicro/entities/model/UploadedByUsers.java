@@ -1,25 +1,29 @@
 package com.cvetkov.fedor.laboratoryworkmicro.entities.model;
 
-import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
-import lombok.Getter;
+import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
+import org.springframework.data.relational.core.mapping.Column;
+import org.springframework.data.relational.core.mapping.Table;
 
-@Entity
-@Table(name = "uploaded_by_users", schema = "audios")
-@Setter
-@Getter
+//@Entity
+//@Table(name = "uploaded_by_users", schema = "audios")
+//@Setter
+//@Getter
 @NoArgsConstructor
 @AllArgsConstructor
-@IdClass(UploadedByUsersPK.class)
+@Table(value = "uploaded_by_users", schema = "audios")
+@Data
+//@IdClass(UploadedByUsersPK.class)
 public class UploadedByUsers {
 
-    @Id
-    @Column(name = "user_id")
-    private Long userid;
+//    @Id
+//    @Column(value = "user_id")
+//    @Id
 
-    @Id
-    @Column(name = "audio_id")
+    private Long userId;
+
+//    @Id
+//    @Column(value = "audio_id")
     private Long audioId;
 }

@@ -1,31 +1,31 @@
 package com.cvetkov.fedor.laboratoryworkmicro.entities.model;
 
-import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
-import lombok.Getter;
+import lombok.Data;
+import lombok.Generated;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
+import org.springframework.data.relational.core.mapping.Table;
+import org.springframework.data.annotation.Id;
 
-import java.util.List;
-
-@Entity
-@Table(name = "authors", schema = "audios")
-@Setter
-@Getter
+//@Entity
+//@Table(name = "authors", schema = "audios")
+@Data
 @NoArgsConstructor
+@Table(value = "authors", schema = "audios")
 public class Author {
 
+//    @Id
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
+//    @Column(name = "id")
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
     private Long id;
 
     @NotBlank(message = "Name is mandatory")
-    @Column(name = "name")
+//    @Column(name = "name")
     private String name;
 
     @NotBlank(message = "Description is mandatory")
-    @Column(name = "description")
+//    @Column(name = "description")
     private String description;
 
 //    @OneToMany(
@@ -33,18 +33,18 @@ public class Author {
 //            fetch = FetchType.LAZY)
 //    private List<User> users;
 
-    @OneToMany(
-            mappedBy = "author",
-            fetch = FetchType.LAZY,
-            cascade = CascadeType.REMOVE)
-    private List<Audio> audios;
+//    @OneToMany(
+//            mappedBy = "author",
+//            fetch = FetchType.LAZY,
+//            cascade = CascadeType.REMOVE)
+//    private List<Audio> audios;
 
-    @Override
-    public String toString() {
-        return "Author{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", description='" + description + '\'' +
-                '}';
-    }
+//    @Override
+//    public String toString() {
+//        return "Author{" +
+//                "id=" + id +
+//                ", name='" + name + '\'' +
+//                ", description='" + description + '\'' +
+//                '}';
+//    }
 }

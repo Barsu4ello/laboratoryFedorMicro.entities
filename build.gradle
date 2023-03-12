@@ -24,6 +24,10 @@ dependencies {
     implementation 'com.fasterxml.jackson.core:jackson-annotations:2.14.0'
     implementation 'org.modelmapper:modelmapper:3.1.1'
 
+    //reactor
+    implementation 'org.springframework.boot:spring-boot-starter-webflux'
+    implementation 'org.springframework.boot:spring-boot-starter-data-r2dbc'
+
     //lombok
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
