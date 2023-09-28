@@ -32,8 +32,12 @@ public class Ticket {
 //    @JoinColumn(name = "user_id")
 //    private User user;
 
+    //(c KeyCloak это не надо) НЕ ЗАБУДЬ В БД ТИП ИЗМЕНИТЬ ЕСЛИ БУДЕШЬ НАЗАД ВСЕ ПЕРЕКРУЧИВАТЬ
+//    @Column(name = "user_id")
+//    private Long userid;
+
     @Column(name = "user_id")
-    private Long userid;
+    private String userId;
 
     @Override
     public String toString() {
@@ -41,7 +45,7 @@ public class Ticket {
                 "id=" + id +
                 ", price=" + price +
                 ", concert=" + concert +
-                ", userid=" + userid +
+                ", userid=" + userId +
                 '}';
     }
 }

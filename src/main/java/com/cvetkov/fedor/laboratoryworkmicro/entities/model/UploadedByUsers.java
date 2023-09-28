@@ -17,11 +17,10 @@ import org.springframework.data.relational.core.mapping.Table;
 //@IdClass(UploadedByUsersPK.class)
 public class UploadedByUsers {
 
-//    @Id
-//    @Column(value = "user_id")
-//    @Id
 
-    private Long userId;
+    //(c KeyCloak это не надо) НЕ ЗАБУДЬ В БД ТИП ИЗМЕНИТЬ ЕСЛИ БУДЕШЬ НАЗАД ВСЕ ПЕРЕКРУЧИВАТЬ
+//    private Long userId;
+    private String userId;
 
 //    @Id
 //    @Column(value = "audio_id")

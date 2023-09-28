@@ -21,5 +21,6 @@ public class UserSubscriptionRequest {
     private Long subscriptionId;
 
     @NotNull(message = "User is mandatory")
-    private Long hostUserId;
+//    private Long hostUserId;
+    private String hostUserId;
 }

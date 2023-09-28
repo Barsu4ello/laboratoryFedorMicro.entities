@@ -13,7 +13,8 @@ import java.util.List;
 public class UserAndAudioRequest {
 
     @NotNull(message = "userId is mandatory")
-    private Long userId;
+//    private Long userId;
+    private String userId;
 
     @NotNull(message = "audiosId is mandatory")
     private List<Long> audiosId;

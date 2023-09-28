@@ -32,9 +32,14 @@ public class UserSubscription {
 //    @JoinColumn(name = "host_user_id")
 //    private User user;
 
-    @NotNull(message = "User is mandatory")
-    @Column(name = "host_user_id")
-    private Long userid;
+    //(c KeyCloak это не надо) НЕ ЗАБУДЬ В БД ТИП ИЗМЕНИТЬ ЕСЛИ БУДЕШЬ НАЗАД ВСЕ ПЕРЕКРУЧИВАТЬ
+//    @NotNull(message = "User is mandatory")
+//    @Column(name = "host_user_id")
+//    private Long userid;
+//
+
+    @Column(name = "user_id")
+    private String userId;
 
     @Override
     public String toString() {
@@ -42,7 +47,7 @@ public class UserSubscription {
                 "id=" + id +
                 ", isValid=" + isValid +
                 ", subscription=" + subscription.getId() +
-                ", user=" + userid +
+                ", user=" + userId +
                 '}';
     }
 }
